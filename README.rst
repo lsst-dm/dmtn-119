@@ -34,13 +34,13 @@ Clean built files::
 
     make clean
 
-Updating acronyms
+Updating glossary
 -----------------
 
-A table of the technote's acronyms and their definitions are maintained in the `acronyms.tex` file, which is committed as part of this repository.
-To update the acronyms table in ``acronyms.tex``::
+A table of the technote's acronyms and their definitions are maintained in the `aglossary.tex` file, which is committed as part of this repository.
+To update the acronyms table in ``aglossary.tex``::
 
-    make acronyms.tex
+    make aglossary.tex
 
 *Note: this command requires that this repository was cloned as a submodule.*
 

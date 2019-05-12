@@ -1,3 +1,4 @@
+#for dependency you want all tex files  but for acronyms you do not want to include the acronyms file itself.
 DOCTYPE = DMTN
 DOCNUMBER = 119
 DOCNAME = $(DOCTYPE)-$(DOCNUMBER)
@@ -11,34 +12,35 @@ ifneq "$(GITSTATUS)" ""
 	GITDIRTY = -dirty
 endif
 
-TEXMFHOME = lsst-texmf/texmf
 
-$(DOCNAME).pdf: $(tex) meta.tex local.bib
-	xelatex $(DOCNAME)
-	bibtex $(DOCNAME)
-	xelatex $(DOCNAME)
-	bibtex $(DOCNAME)
-	xelatex $(DOCNAME)
-	xelatex $(DOCNAME)
+tex=$(filter-out $(wildcard *aglossary.tex) , $(wildcard *.tex))  
 
-acronyms.tex: $(tex) myacronyms.txt
-	$(TEXMFHOME)/../bin/generateAcronyms.py $(tex)
+
+SRC= $(DOCNAME).tex
+
+OBJ=$(SRC:.tex=.pdf)
+
+#Default when you type make
+all: $(OBJ)
+
+$(OBJ): $(tex) aglossary.tex meta.tex
+	latexmk -bibtex -xelatex -f $(SRC)
+	makeglossaries $(DOCNAME)      
+	xelatex $(SRC)
+
+#The generateAcronyms.py  script is in lsst-texmf/bin - put that in the path
+acronyms.tex :$(tex) myacronyms.txt
+	generateAcronyms.py   $(tex)
+
+aglossary.tex :$(tex) myacronyms.txt
+	generateAcronyms.py  -g $(tex)
+	generateAcronyms.py  -g -u $(tex) aglossary.tex
 
 .PHONY: clean
-clean:
-	rm -f $(DOCNAME).aux
-	rm -f $(DOCNAME).bbl
-	rm -f $(DOCNAME).blg
-	rm -f $(DOCNAME).glg
-	rm -f $(DOCNAME).glo
-	rm -f $(DOCNAME).gls
-	rm -f $(DOCNAME).ist
-	rm -f $(DOCNAME).log
-	rm -f $(DOCNAME).out
-	rm -f $(DOCNAME).pdf
-	rm -f $(DOCNAME).rec
-	rm -f $(DOCNAME).toc
-	rm -f meta.tex
+clean :
+	latexmk -c
+	rm *.pdf *.nav *.bbl *.xdv *.snm meta.tex
+
 
 .FORCE:
 
@@ -50,3 +52,5 @@ meta.tex: Makefile .FORCE
 	/bin/echo '\newcommand{\lsstDocNum}{$(DOCNUMBER)}' >>$@
 	/bin/echo '\newcommand{\vcsRevision}{$(GITVERSION)$(GITDIRTY)}' >>$@
 	/bin/echo '\newcommand{\vcsDate}{$(GITDATE)}' >>$@
+
+

@@ -1,0 +1,85 @@
+# Stars: Mag(Gaussian) - PSFMag (mmag) (commonZP)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i    -0.46     6.84    -0.56     51258     52230        83
+# weighted avg       i    -0.43     6.67    -0.52     51258     52230        83
+#================================================================================
+# Stars: Mag(CircAper12pix) - PSFMag (mmag) (commonZP)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i    -1.08     9.63    -1.20     51373     52230        83
+# weighted avg       i    -1.05     9.57    -1.16     51373     52230        83
+#================================================================================
+# Stars: Mag(Gaussian) - PSFMag (mmag)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i    -0.46     6.84    -0.56     51258     52230        83
+# weighted avg       i    -0.43     6.67    -0.52     51258     52230        83
+#================================================================================
+# Stars: Mag(CircAper12pix) - PSFMag (mmag)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i    -1.08     9.63    -1.20     51373     52230        83
+# weighted avg       i    -1.05     9.57    -1.16     51373     52230        83
+#================================================================================
+# Stars:   SdssShape Trace (calib_psf_used): $\sqrt{0.5*(I_{xx}+I_{yy})}$ (pixels)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i     1.50     0.01     1.50     39435     39441        83
+# weighted avg       i     1.51     0.01     1.51     39435     39441        83
+#================================================================================
+# Stars:  SdssShape Trace: $\sqrt{0.5*(I_{xx}+I_{yy})}$ (pixels)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i     1.51     0.01     1.51     51513     52230        83
+# weighted avg       i     1.51     0.01     1.51     51513     52230        83
+#================================================================================
+# Stars:  SdssShape Trace % diff (psf_used - PSFmodel)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i     0.05     0.54     0.06     39411     39441        83
+# weighted avg       i     0.03     0.52     0.05     39411     39441        83
+#================================================================================
+# Stars: PSF - ref (calib_psf_used) (mmag)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i     1.08     7.07     1.12     36861     37100        83
+# weighted avg       i     1.04     7.04     1.08     36861     37100        83
+#================================================================================
+# Stars:  PSF - ref (calib_photom_used) (mmag)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i     1.30     7.58     1.26     48957     49377        83
+# weighted avg       i     1.27     7.55     1.23     48957     49377        83
+#================================================================================
+# Stars: PSF - ref (mmag)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i     1.26     7.60     1.24     50483     50939        83
+# weighted avg       i     1.23     7.56     1.19     50483     50939        83
+#================================================================================
+# Stars: CircAper12pix - ref (calib_psf_used) (mmag)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i     0.41     7.33     0.35     35636     37100        83
+# weighted avg       i     0.41     7.32     0.34     35636     37100        83
+#================================================================================
+# Stars:  CircAper12pix - ref (calib_photom_used) (mmag)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i     0.28     7.41     0.22     47018     49377        83
+# weighted avg       i     0.29     7.39     0.22     47018     49377        83
+#================================================================================
+# Stars: CircAper12pix - ref (mmag)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i     0.20     7.50     0.12     48218     50939        83
+# weighted avg       i     0.20     7.48     0.12     48218     50939        83
+#================================================================================
+# Stars: matches_distance_calib_astrometry_used (mas)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i     7.51     4.51     6.70     50403     50939        83
+# weighted avg       i     7.51     4.50     6.72     50403     50939        83
+#================================================================================
+# Stars: matches_distance (mas)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i     7.51     8.76     6.70     50403     50939        83
+# weighted avg       i     7.51     8.76     6.72     50403     50939        83
+#================================================================================
+# Stars:  $\delta_{Ra}$ = $\Delta$RA*cos(Dec) (mas) (calib_astrom_used)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i    -0.02     7.04    -0.08     50781     50939        83
+# weighted avg       i     0.01     7.05    -0.06     50781     50939        83
+#================================================================================
+# Stars: $\delta_{Ra}$ = $\Delta$RA*cos(Dec) (mas)
+#                filter    mean    stdev    median     num      numTot  NumEntries
+# straight avg       i    -0.02     7.04    -0.08     50781     50939        83
+# weighted avg       i     0.01     7.05    -0.06     50781     50939        83
+#================================================================================

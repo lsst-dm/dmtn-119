@@ -1,0 +1,57 @@
+\section{Introduction} \label{sec:intro}
+
+LSST \gls{DM} conducted the first operations rehearsal from May 7$^{th}$ to 9$^{th}$ 2019.
+The plan for the rehearsal was outlined in \citeds{LDM-643}, the main principle was to simulate
+nominal operations with \gls{CCD} data flowing from Chile, being processed (calibrated) and having some quality
+assurance done on it.
+\citeds{LDM-643} details the procedure and personnel involved,
+hence in this document  we give a brief run down of what  happened in the rehearsal taking that as read.
+
+
+\section{The rehearsal \#1}
+
+There was a short prep meeting on the Mindy before the rehearsal started to make sure everything was in place.
+\subsection{Setup and limitations} \label{sec:setup}
+
+
+
+A set of raft data (simulated data from DC2) which intersected
+intersect tract 4849 patch 2,2.  The datasets for each night are comprised
+of "observations" from two bands (night1: r,i-bands;  night2: z,y-bands, night3: u,g-bands).
+
+Processing is to run singleFrameDriver.py - this is still Gen2 butler.
+
+The three \gls{DESC} DC2 data sets were transferred to a DTN\footnote{lsst-user@139.229.127.99} in Chile to act as the acquired data.
+A cron job was installed to start a script\footnote{\url{https://github.com/womullan/opsforwarder}} to transfer the files to the receiving node in \gls{NCSA} \footnote{xfer.ncsa.illinois.edu}. Secure copy \texttt{(scp)}  was used to make the transfer under the user \texttt{womullan}.
+
+In operations the transfer nodes should be automatically transferring data which shows up in an operations directory. The script was only for this exercise. The \gls{DTN} which was used is an \gls{FIU} machine not one of our final nodes and hence is not set up as we will for operations.
+
+Ingest, processing and \gls{QA} were run on the full dataset once transferred not as each file arrived.
+
+\subsubsection{Communications }
+
+
+A Slack channel \href{https://lsstc.slack.com/messages/CJBSY6FUN}{\#ops-rehearal-1}  was created
+for minor communications.
+
+Daily telecon was held using bluejeans at 11:00PST with the agenda:
+\begin{itemize}
+\item Serio	Status on mountain (can tailor for what is actually happening right now and we can discuss how this looks in commissioning and operations). Andrew gives "mock" night report.
+\item Gruendl 	Processing summary. How did ingest go. How did processing go.
+\item MacArthur, Slater	Metrics/QA, what's in the logs, what can we say about the data. Summary plots and metrics. What is missing in our view. What can we add for next night?
+\item Morganson	Issues, resolution. Did anything happen that we can fix for the next night
+
+\item All	Plan for next night. What do we need to do to make sure next night works better (or as well).
+\end{itemize}
+
+
+\input{day1}
+\input{day2}
+\input{day3}
+
+
+\section{Conclusion and lessons learned}\label{sec:conc}
+Though there were some limitation in out setup (\secref{sec:setup}) this was still useful exercise.
+
+
+

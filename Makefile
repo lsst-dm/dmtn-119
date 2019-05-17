@@ -34,6 +34,8 @@ acronyms.tex :$(tex) myacronyms.txt
 
 aglossary.tex :$(tex) myacronyms.txt
 	generateAcronyms.py  -g $(tex)
+	generateAcronyms.py  -ug $(tex)
+
 
 .PHONY: clean
 clean :

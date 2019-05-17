@@ -13,3 +13,5 @@ A
 CCDS
 FATAL
 SCP
+GIT
+WARN make

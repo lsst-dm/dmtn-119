@@ -19,7 +19,7 @@ of "observations" from two bands (night1: r, i-bands;  night2: z, y-bands, night
 
 Processing is to run singleFrameDriver.py - this is still Gen2 butler.
 
-The three \gls{DESC} DC2 data sets were transferred to a DTN\footnote{lsst-user@139.229.127.99} in Chile to act as the acquired data.
+The three \gls{DESC} DC2 data sets were transferred to a \gls{DTN}\footnote{lsst-user@139.229.127.99} in Chile to act as the acquired data.
 A cron job was installed to start a script\footnote{\url{https://github.com/womullan/opsforwarder}} to transfer the files to the receiving node in \gls{NCSA} \footnote{xfer.ncsa.illinois.edu}. Secure copy \texttt{(scp)}  was used to make the transfer under the user \texttt{womullan}.
 
 In operations the transfer nodes should be automatically transferring data which shows up in an operations directory. The script was only for this exercise. The \gls{DTN} which was used is an \gls{FIU} machine not one of our final nodes and hence is not set up as we will for operations.
